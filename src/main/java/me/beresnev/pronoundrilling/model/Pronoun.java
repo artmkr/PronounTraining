@@ -1,6 +1,4 @@
-package me.beresnev.model;
-
-import java.util.List;
+package me.beresnev.pronoundrilling.model;
 
 /**
  * @author Ignat Beresnev
@@ -13,6 +11,10 @@ public class Pronoun {
     public Pronoun(String pronoun, boolean isPlural) {
         this.pronoun = pronoun;
         this.isPlural = isPlural;
+    }
+
+    public String getPronoun() {
+        return pronoun;
     }
 
     public boolean isPlural() {

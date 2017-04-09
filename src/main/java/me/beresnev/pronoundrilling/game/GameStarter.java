@@ -4,17 +4,19 @@ import me.beresnev.pronoundrilling.model.Pronoun;
 import me.beresnev.pronoundrilling.model.Round;
 import me.beresnev.pronoundrilling.model.Verb;
 import me.beresnev.pronoundrilling.model.VerbPair;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URISyntaxException;
 
 /**
  * @author Ignat Beresnev
  * @since 06.04.17
  */
-public class Main {
+@Component
+public class GameStarter {
 
     private static Pronoun pronoun;
     private static Verb firstVerb;
@@ -22,14 +24,17 @@ public class Main {
     private static int score = 0;
     private static long startTime;
 
-    public static void main(String[] args) throws IOException, URISyntaxException {
-        startTheGame();
+    private final GameManager gameManager;
+
+    @Autowired
+    public GameStarter(GameManager gameManager) {
+        this.gameManager = gameManager;
     }
 
     /**
      * Console only
      */
-    public static void startTheGame(){
+    public void startTheGame(){
         startTime = System.currentTimeMillis();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             System.err.println("Core pronouns only? [y/n]");
@@ -54,7 +59,7 @@ public class Main {
                         break;
                 }
 
-                boolean correct = GameManager.isCorrectAnswer(pronoun, chosen);
+                boolean correct = gameManager.isCorrectAnswer(pronoun, chosen);
                 if(!correct){
                     System.err.println("Wrong answer.");
                     break;
@@ -76,8 +81,8 @@ public class Main {
         }
     }
 
-    public static void writeRound(boolean corePronounsOnly, boolean coreVerbsOnly) throws IOException {
-        Round round = GameManager.generateRound(corePronounsOnly, coreVerbsOnly);
+    public void writeRound(boolean corePronounsOnly, boolean coreVerbsOnly) throws IOException {
+        Round round = gameManager.generateRound(corePronounsOnly, coreVerbsOnly);
         pronoun = round.getPronoun();
         VerbPair verbPair = round.getVerbPair();
         firstVerb = verbPair.getFirst();

@@ -1,4 +1,4 @@
-package me.beresnev.model;
+package me.beresnev.pronoundrilling.model;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -32,6 +32,14 @@ public class VerbPair {
 
     public Verb getSecond() {
         return second;
+    }
+
+    public Verb getPlural(){
+        return first.isPlural() ? first : second;
+    }
+
+    public Verb getSingular(){
+        return !first.isPlural() ? first : second;
     }
 
     public void switchPlaces(){

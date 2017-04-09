@@ -1,13 +1,16 @@
-package me.beresnev.game;
+package me.beresnev.pronoundrilling.game;
 
-import me.beresnev.model.Pronoun;
-import me.beresnev.model.Round;
-import me.beresnev.model.Verb;
-import me.beresnev.model.VerbPair;
-import me.beresnev.parser.PronounFileParser;
-import me.beresnev.parser.VerbFileParser;
 
-import java.util.Collections;
+import me.beresnev.pronoundrilling.dao.WordsDao;
+import me.beresnev.pronoundrilling.model.Pronoun;
+import me.beresnev.pronoundrilling.model.Round;
+import me.beresnev.pronoundrilling.model.Verb;
+import me.beresnev.pronoundrilling.model.VerbPair;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -15,31 +18,36 @@ import java.util.concurrent.ThreadLocalRandom;
  * @author Ignat Beresnev
  * @since 06.04.17
  */
+@Component
 public class GameManager {
-    private static List<Pronoun> pronouns;
-    private static List<Pronoun> corePronouns;
-    private static List<VerbPair> coreVerbs;
-    private static List<VerbPair> verbs;
+    private List<Pronoun> pronouns;
+    private List<Pronoun> corePronouns;
+    private List<VerbPair> coreVerbs;
+    private List<VerbPair> verbs;
 
-    static {
-        corePronouns = Collections.unmodifiableList(PronounFileParser.getCore());
-        pronouns = Collections.unmodifiableList(PronounFileParser.parseFile(null));
+    private final WordsDao wordsDao;
+    private final Logger logger = LoggerFactory.getLogger(GameManager.class);
 
-        coreVerbs = Collections.unmodifiableList(VerbFileParser.getCore());
-        verbs = Collections.unmodifiableList(VerbFileParser.parseFile(null));
+    @Autowired
+    public GameManager(WordsDao wordsDao) {
+        this.wordsDao = wordsDao;
+        corePronouns = wordsDao.getCorePronouns();
+        pronouns = wordsDao.getPronouns();
+        coreVerbs = wordsDao.getCoreVerbs();
+        verbs = wordsDao.getVerbs();
     }
 
-    public static Round generateRound(boolean corePronounsOnly, boolean coreVerbsOnly){
+    public Round generateRound(boolean corePronounsOnly, boolean coreVerbsOnly){
         return new Round(
                 getRandomItemFromList(corePronouns, pronouns, corePronounsOnly), // pronouns
                 getRandomItemFromList(coreVerbs, verbs, coreVerbsOnly)); // verbs
     }
 
-    public static boolean isCorrectAnswer(Pronoun pronoun, Verb verb){
+    public boolean isCorrectAnswer(Pronoun pronoun, Verb verb){
         return pronoun.isPlural() == verb.isPlural();
     }
 
-    private static <T> T getRandomItemFromList(List<T> coreList, List<T> list, boolean core){
+    private <T> T getRandomItemFromList(List<T> coreList, List<T> list, boolean core){
         List<T> requestedList = core ? coreList : list;
         int random = ThreadLocalRandom.current().nextInt(requestedList.size());
         return requestedList.get(random);

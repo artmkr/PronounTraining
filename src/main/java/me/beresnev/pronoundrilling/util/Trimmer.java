@@ -1,4 +1,4 @@
-package me.beresnev.util;
+package me.beresnev.pronoundrilling.util;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

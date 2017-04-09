@@ -1,7 +1,7 @@
-package me.beresnev.dao;
+package me.beresnev.pronoundrilling.dao;
 
-import me.beresnev.model.Pronoun;
-import me.beresnev.model.Verb;
+import me.beresnev.pronoundrilling.model.Pronoun;
+import me.beresnev.pronoundrilling.model.VerbPair;
 
 import java.util.List;
 
@@ -13,9 +13,9 @@ public interface WordsDao {
     List<Pronoun> getCorePronouns();
     List<Pronoun> getPronouns();
 
-    List<Verb> getCoreVerbs();
-    List<Verb> getVerbs();
+    List<VerbPair> getCoreVerbs();
+    List<VerbPair> getVerbs();
 
-    void insertVerbs(List<Verb> verbs);
+    void insertVerbs(List<VerbPair> pairList);
     void insertPronouns(List<Pronoun> pronouns);
 }

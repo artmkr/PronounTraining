@@ -1,4 +1,4 @@
-package me.beresnev.model;
+package me.beresnev.pronoundrilling.model;
 
 /**
  * @author Ignat Beresnev

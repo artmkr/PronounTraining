@@ -1,4 +1,4 @@
-package me.beresnev.util;
+package me.beresnev.pronoundrilling.util;
 
 import java.util.Arrays;
 import java.util.HashSet;
