@@ -1,18 +1,14 @@
-package me.beresnev.game;
+package me.beresnev.pronoundrilling.game;
 
-import me.beresnev.model.Pronoun;
-import me.beresnev.model.Round;
-import me.beresnev.model.Verb;
-import me.beresnev.model.VerbPair;
-import me.beresnev.parser.PronounFileParser;
-import me.beresnev.parser.VerbFileParser;
-import me.beresnev.util.Trimmer;
+import me.beresnev.pronoundrilling.model.Pronoun;
+import me.beresnev.pronoundrilling.model.Round;
+import me.beresnev.pronoundrilling.model.Verb;
+import me.beresnev.pronoundrilling.model.VerbPair;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URISyntaxException;
-import java.nio.file.Paths;
 
 /**
  * @author Ignat Beresnev
