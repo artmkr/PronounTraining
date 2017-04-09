@@ -2,10 +2,10 @@ package me.beresnev.pronoundrilling.game;
 
 
 import me.beresnev.pronoundrilling.dao.WordsDao;
-import me.beresnev.pronoundrilling.model.Pronoun;
-import me.beresnev.pronoundrilling.model.Round;
-import me.beresnev.pronoundrilling.model.Verb;
-import me.beresnev.pronoundrilling.model.VerbPair;
+import me.beresnev.pronoundrilling.dto.Pronoun;
+import me.beresnev.pronoundrilling.dto.Round;
+import me.beresnev.pronoundrilling.dto.Verb;
+import me.beresnev.pronoundrilling.dto.VerbPair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +20,12 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 @Component
 public class GameManager {
+    private final WordsDao wordsDao;
+    private final Logger logger = LoggerFactory.getLogger(GameManager.class);
     private List<Pronoun> pronouns;
     private List<Pronoun> corePronouns;
     private List<VerbPair> coreVerbs;
     private List<VerbPair> verbs;
-
-    private final WordsDao wordsDao;
-    private final Logger logger = LoggerFactory.getLogger(GameManager.class);
 
     @Autowired
     public GameManager(WordsDao wordsDao) {

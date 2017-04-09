@@ -1,4 +1,4 @@
-package me.beresnev.pronoundrilling.model;
+package me.beresnev.pronoundrilling.dto;
 
 import java.util.concurrent.ThreadLocalRandom;
 

@@ -1,8 +1,8 @@
 package me.beresnev.pronoundrilling.util;
 
-import me.beresnev.pronoundrilling.model.Pronoun;
-import me.beresnev.pronoundrilling.model.Verb;
-import me.beresnev.pronoundrilling.model.VerbPair;
+import me.beresnev.pronoundrilling.dto.Pronoun;
+import me.beresnev.pronoundrilling.dto.Verb;
+import me.beresnev.pronoundrilling.dto.VerbPair;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -26,6 +26,7 @@ public class FileParser {
             String line;
             String[] arr;
             while ((line = reader.readLine()) != null) {
+                line = line.trim();
                 arr = line.split(":");
                 Pronoun pronoun = new Pronoun(arr[0], Boolean.parseBoolean(arr[1]));
                 pronouns.add(pronoun);

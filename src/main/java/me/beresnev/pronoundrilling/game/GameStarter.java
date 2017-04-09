@@ -1,9 +1,9 @@
 package me.beresnev.pronoundrilling.game;
 
-import me.beresnev.pronoundrilling.model.Pronoun;
-import me.beresnev.pronoundrilling.model.Round;
-import me.beresnev.pronoundrilling.model.Verb;
-import me.beresnev.pronoundrilling.model.VerbPair;
+import me.beresnev.pronoundrilling.dto.Pronoun;
+import me.beresnev.pronoundrilling.dto.Round;
+import me.beresnev.pronoundrilling.dto.Verb;
+import me.beresnev.pronoundrilling.dto.VerbPair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

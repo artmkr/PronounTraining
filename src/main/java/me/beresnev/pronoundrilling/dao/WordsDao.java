@@ -1,7 +1,7 @@
 package me.beresnev.pronoundrilling.dao;
 
-import me.beresnev.pronoundrilling.model.Pronoun;
-import me.beresnev.pronoundrilling.model.VerbPair;
+import me.beresnev.pronoundrilling.dto.Pronoun;
+import me.beresnev.pronoundrilling.dto.VerbPair;
 
 import java.util.List;
 

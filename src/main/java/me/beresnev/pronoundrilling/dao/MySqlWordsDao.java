@@ -1,8 +1,8 @@
 package me.beresnev.pronoundrilling.dao;
 
-import me.beresnev.pronoundrilling.model.Pronoun;
-import me.beresnev.pronoundrilling.model.Verb;
-import me.beresnev.pronoundrilling.model.VerbPair;
+import me.beresnev.pronoundrilling.dto.Pronoun;
+import me.beresnev.pronoundrilling.dto.Verb;
+import me.beresnev.pronoundrilling.dto.VerbPair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +21,8 @@ import java.util.List;
 @Repository
 public class MySqlWordsDao implements WordsDao {
 
-    private final JdbcTemplate jdbcTemplate;
     private static final Logger logger = LoggerFactory.getLogger(MySqlWordsDao.class);
+    private final JdbcTemplate jdbcTemplate;
 
     /**
      * IMPORTANT: enable &rewriteBatchedStatements=true in connection URL
