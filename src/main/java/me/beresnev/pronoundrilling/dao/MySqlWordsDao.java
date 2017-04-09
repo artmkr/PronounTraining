@@ -19,6 +19,7 @@ import java.util.List;
  * @since 09.04.17
  */
 @Repository
+//@Transactional TODO: Check
 public class MySqlWordsDao implements WordsDao {
 
     private static final Logger logger = LoggerFactory.getLogger(MySqlWordsDao.class);

@@ -5,19 +5,28 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.*;
+import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.annotation.Resource;
+import java.util.Locale;
 
 /**
  * @author Ignat Beresnev
  * @since 09.04.17
  */
 @Configuration
-//@EnableWebMvc
-//@EnableTransactionManagement
+@EnableWebMvc
+@EnableTransactionManagement
 @ComponentScan(basePackages = "me.beresnev.pronoundrilling")
 @PropertySource("classpath:settings.properties")
 public class ApplicationConfig extends WebMvcConfigurerAdapter {
@@ -25,7 +34,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
     @Resource
     private Environment env;
 
-    /*@Bean
+    @Bean
     public InternalResourceViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setContentType("text/html;charset=UTF-8");
@@ -33,7 +42,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
         viewResolver.setSuffix(".jsp");
         logger.info("ViewResolver initialized");
         return viewResolver;
-    }*/
+    }
 
     @Bean
     @Qualifier("dataSource")
@@ -46,11 +55,11 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
         return dataSource;
     }
 
-    /*@Override
+    @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources*").addResourceLocations("/resources/");
         logger.info("Resource handler registered");
-    }*/
+    }
 
     @Bean
     @DependsOn("dataSource")
@@ -58,7 +67,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
         return new JdbcTemplate(dataSource());
     }
 
-    /*@Bean
+    @Bean
     public ResourceBundleMessageSource messageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
         messageSource.setBasename("/localeMessages/messages");
@@ -84,5 +93,5 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();
         localeResolver.setDefaultLocale(new Locale("en"));
         return localeResolver;
-    }*/
+    }
 }

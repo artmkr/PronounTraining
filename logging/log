@@ -21,3 +21,259 @@
 2017-04-09 23:00:00,143 INFO  SQLErrorCodesFactory [SQLErrorCodesFactory.java:127] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
 2017-04-09 23:01:32,205 INFO  AnnotationConfigApplicationContext [AbstractApplicationContext.java:582] Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@396a51ab: startup date [Sun Apr 09 23:01:32 MSK 2017]; root of context hierarchy
 2017-04-09 23:02:47,932 INFO  AnnotationConfigApplicationContext [AbstractApplicationContext.java:582] Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@396a51ab: startup date [Sun Apr 09 23:02:47 MSK 2017]; root of context hierarchy
+2017-04-09 23:37:45,342 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-09 23:37:45,374 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Sun Apr 09 23:37:45 MSK 2017]; root of context hierarchy
+2017-04-09 23:37:45,399 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-09 23:37:45,764 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 419 ms
+2017-04-09 23:37:45,861 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-09 23:37:45,865 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:37:45 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:37:45,866 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-09 23:37:46,585 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-09 23:37:47,156 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-09 23:37:47,376 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean)
+2017-04-09 23:37:47,378 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-09 23:37:47,432 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-09 23:37:47,447 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-09 23:37:47,566 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:37:45 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:37:47,677 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-09 23:37:47,785 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1924 ms
+2017-04-09 23:37:58,167 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:37:45 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:38:04,615 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-09 23:38:04,692 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Sun Apr 09 23:38:04 MSK 2017]; root of context hierarchy
+2017-04-09 23:38:04,744 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-09 23:38:05,043 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 420 ms
+2017-04-09 23:38:05,162 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-09 23:38:05,169 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:38:05 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:38:05,170 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-09 23:38:05,983 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-09 23:38:06,644 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-09 23:38:06,850 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getround],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean)
+2017-04-09 23:38:06,852 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-09 23:38:06,904 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-09 23:38:06,930 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-09 23:38:07,025 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:38:05 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:38:07,183 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-09 23:38:07,287 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 2124 ms
+2017-04-09 23:38:09,131 WARN  PageNotFound [DispatcherServlet.java:1172] No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcher-servlet'
+2017-04-09 23:38:12,573 WARN  PageNotFound [DispatcherServlet.java:1172] No mapping found for HTTP request with URI [/getRound] in DispatcherServlet with name 'dispatcher-servlet'
+2017-04-09 23:38:36,781 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:38:05 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:42:48,583 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-09 23:42:48,614 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Sun Apr 09 23:42:48 MSK 2017]; root of context hierarchy
+2017-04-09 23:42:48,639 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-09 23:42:48,785 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 200 ms
+2017-04-09 23:42:48,850 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-09 23:42:48,854 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:42:48 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:42:48,854 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-09 23:42:49,305 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-09 23:42:49,650 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-09 23:42:49,745 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean)
+2017-04-09 23:42:49,746 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-09 23:42:49,766 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-09 23:42:49,776 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-09 23:42:49,942 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:42:48 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:42:50,007 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-09 23:42:50,092 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1242 ms
+2017-04-09 23:42:59,737 WARN  PageNotFound [DispatcherServlet.java:1172] No mapping found for HTTP request with URI [/getround] in DispatcherServlet with name 'dispatcher-servlet'
+2017-04-09 23:44:53,342 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:42:48 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:44:58,460 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-09 23:44:58,492 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Sun Apr 09 23:44:58 MSK 2017]; root of context hierarchy
+2017-04-09 23:44:58,519 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-09 23:44:58,692 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 229 ms
+2017-04-09 23:44:58,755 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-09 23:44:58,759 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:44:58 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:44:58,760 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-09 23:44:59,188 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-09 23:44:59,495 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-09 23:44:59,600 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean)
+2017-04-09 23:44:59,601 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-09 23:44:59,627 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-09 23:44:59,638 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-09 23:44:59,805 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:44:58 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:44:59,871 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-09 23:44:59,931 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1176 ms
+2017-04-09 23:53:59,591 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:44:58 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:54:18,567 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-09 23:54:18,618 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Sun Apr 09 23:54:18 MSK 2017]; root of context hierarchy
+2017-04-09 23:54:18,652 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-09 23:54:18,865 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 295 ms
+2017-04-09 23:54:18,944 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-09 23:54:18,948 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:54:18 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:54:18,949 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-09 23:54:19,424 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-09 23:54:19,788 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-09 23:54:19,884 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean)
+2017-04-09 23:54:19,885 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/drill],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.drill()
+2017-04-09 23:54:19,886 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-09 23:54:19,903 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-09 23:54:19,912 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-09 23:54:20,077 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:54:18 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:54:20,137 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-09 23:54:20,206 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1262 ms
+2017-04-09 23:54:47,470 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:54:18 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:54:51,934 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-09 23:54:51,969 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Sun Apr 09 23:54:51 MSK 2017]; root of context hierarchy
+2017-04-09 23:54:51,997 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-09 23:54:52,152 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 215 ms
+2017-04-09 23:54:52,240 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-09 23:54:52,246 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:54:52 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:54:52,247 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-09 23:54:52,773 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-09 23:54:53,190 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-09 23:54:53,314 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/drill],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.drill()
+2017-04-09 23:54:53,315 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean)
+2017-04-09 23:54:53,316 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-09 23:54:53,343 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-09 23:54:53,358 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-09 23:54:53,586 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:54:52 MSK 2017]; parent: Root WebApplicationContext
+2017-04-09 23:54:53,664 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-09 23:54:53,736 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1496 ms
+2017-04-10 00:05:38,808 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Sun Apr 09 23:54:52 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 00:05:43,764 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-10 00:05:43,797 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Mon Apr 10 00:05:43 MSK 2017]; root of context hierarchy
+2017-04-10 00:05:43,833 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-10 00:05:43,959 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 192 ms
+2017-04-10 00:05:44,027 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-10 00:05:44,031 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 00:05:44 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 00:05:44,032 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-10 00:05:44,492 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-10 00:05:44,795 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-10 00:05:44,894 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean)
+2017-04-10 00:05:44,895 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/drill],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.drill()
+2017-04-10 00:05:44,896 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-10 00:05:44,916 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-10 00:05:44,925 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 00:05:45,076 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 00:05:44 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 00:05:45,132 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-10 00:05:45,181 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1153 ms
+2017-04-10 00:07:42,326 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 00:05:44 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 00:09:06,794 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-10 00:09:06,833 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Mon Apr 10 00:09:06 MSK 2017]; root of context hierarchy
+2017-04-10 00:09:06,872 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-10 00:09:07,019 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 222 ms
+2017-04-10 00:09:07,105 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-10 00:09:07,110 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 00:09:07 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 00:09:07,111 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-10 00:09:07,638 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-10 00:09:08,056 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-10 00:09:08,190 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/drill],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.drill()
+2017-04-10 00:09:08,191 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean)
+2017-04-10 00:09:08,192 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-10 00:09:08,221 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-10 00:09:08,237 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 00:09:08,472 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 00:09:07 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 00:09:08,560 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-10 00:09:08,642 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1536 ms
+2017-04-10 01:08:54,388 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 00:09:07 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 01:08:59,219 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-10 01:08:59,291 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Mon Apr 10 01:08:59 MSK 2017]; root of context hierarchy
+2017-04-10 01:08:59,343 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-10 01:08:59,497 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 275 ms
+2017-04-10 01:08:59,565 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-10 01:08:59,569 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 01:08:59 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 01:08:59,569 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-10 01:09:00,034 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-10 01:09:00,410 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-10 01:09:00,530 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/drill],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.drill()
+2017-04-10 01:09:00,531 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean)
+2017-04-10 01:09:00,532 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-10 01:09:00,557 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-10 01:09:00,570 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 01:09:00,752 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 01:08:59 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 01:09:00,810 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-10 01:09:00,860 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1295 ms
+2017-04-10 01:52:21,941 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 01:08:59 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:00:16,052 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-10 02:00:16,085 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Mon Apr 10 02:00:16 MSK 2017]; root of context hierarchy
+2017-04-10 02:00:16,134 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-10 02:00:16,279 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 225 ms
+2017-04-10 02:00:16,346 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-10 02:00:16,351 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:00:16 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:00:16,351 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-10 02:00:16,746 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-10 02:00:17,052 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-10 02:00:17,146 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/validateRound],methods=[GET],produces=[text/html;charset=UTF-8]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.validateRound(me.beresnev.pronoundrilling.dto.Round)
+2017-04-10 02:00:17,148 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean,org.springframework.ui.Model)
+2017-04-10 02:00:17,148 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/drill],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.drill()
+2017-04-10 02:00:17,148 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-10 02:00:17,169 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-10 02:00:17,179 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 02:00:17,348 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:00:16 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:00:17,408 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-10 02:00:17,457 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1110 ms
+2017-04-10 02:03:02,292 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:00:16 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:03:07,498 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-10 02:03:07,542 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Mon Apr 10 02:03:07 MSK 2017]; root of context hierarchy
+2017-04-10 02:03:07,580 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-10 02:03:07,742 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 241 ms
+2017-04-10 02:03:07,811 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-10 02:03:07,816 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:03:07 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:03:07,816 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-10 02:03:08,248 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-10 02:03:08,607 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-10 02:03:08,700 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/drill],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.drill()
+2017-04-10 02:03:08,701 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean,me.beresnev.pronoundrilling.dto.Round,org.springframework.ui.Model)
+2017-04-10 02:03:08,702 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/validateRound],methods=[GET],produces=[text/html;charset=UTF-8]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.validateRound(me.beresnev.pronoundrilling.dto.Round)
+2017-04-10 02:03:08,702 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-10 02:03:08,729 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-10 02:03:08,741 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 02:03:08,928 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:03:07 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:03:09,004 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-10 02:03:09,066 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1254 ms
+2017-04-10 02:03:54,570 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:03:07 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:13:34,243 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-10 02:13:34,295 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Mon Apr 10 02:13:34 MSK 2017]; root of context hierarchy
+2017-04-10 02:13:34,335 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-10 02:13:34,495 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 249 ms
+2017-04-10 02:13:34,554 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-10 02:13:34,559 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:13:34 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:13:34,559 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-10 02:13:35,004 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-10 02:13:35,361 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-10 02:13:35,501 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/drill],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.drill()
+2017-04-10 02:13:35,502 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean,org.springframework.ui.Model)
+2017-04-10 02:13:35,503 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/validateRound],methods=[GET],produces=[text/html;charset=UTF-8]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.validateRound(me.beresnev.pronoundrilling.dto.Round,java.lang.String)
+2017-04-10 02:13:35,504 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-10 02:13:35,536 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-10 02:13:35,554 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 02:13:35,805 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:13:34 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:13:35,898 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-10 02:13:35,982 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1427 ms
+2017-04-10 02:14:31,217 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:13:34 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:14:36,138 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-10 02:14:36,170 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Mon Apr 10 02:14:36 MSK 2017]; root of context hierarchy
+2017-04-10 02:14:36,198 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-10 02:14:36,399 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 259 ms
+2017-04-10 02:14:36,488 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-10 02:14:36,494 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:14:36 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:14:36,494 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-10 02:14:36,965 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-10 02:14:37,263 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-10 02:14:37,356 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/drill],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.drill()
+2017-04-10 02:14:37,357 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean,org.springframework.ui.Model)
+2017-04-10 02:14:37,358 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/validateRound],methods=[GET],produces=[text/html;charset=UTF-8]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.validateRound(me.beresnev.pronoundrilling.dto.Round,java.lang.String)
+2017-04-10 02:14:37,358 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-10 02:14:37,376 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-10 02:14:37,386 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 02:14:37,541 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:14:36 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:14:37,608 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-10 02:14:37,661 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1172 ms
+2017-04-10 02:17:09,920 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:14:36 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:17:14,077 INFO  ContextLoader [ContextLoader.java:304] Root WebApplicationContext: initialization started
+2017-04-10 02:17:14,125 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing Root WebApplicationContext: startup date [Mon Apr 10 02:17:14 MSK 2017]; root of context hierarchy
+2017-04-10 02:17:14,167 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-04-10 02:17:14,300 INFO  ContextLoader [ContextLoader.java:344] Root WebApplicationContext: initialization completed in 220 ms
+2017-04-10 02:17:14,369 INFO  DispatcherServlet [FrameworkServlet.java:489] FrameworkServlet 'dispatcher-servlet': initialization started
+2017-04-10 02:17:14,373 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:582] Refreshing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:17:14 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:17:14,373 INFO  XmlBeanDefinitionReader [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2017-04-10 02:17:14,823 INFO  ApplicationConfig [ApplicationConfig.java:74] ResourceBundleMessageSource initialized
+2017-04-10 02:17:15,409 INFO  ApplicationConfig [ApplicationConfig.java:88] Interceptors registered
+2017-04-10 02:17:15,562 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/drill],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.drill()
+2017-04-10 02:17:15,564 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/getRound],methods=[GET],produces=[application/json]}" onto public me.beresnev.pronoundrilling.dto.Round me.beresnev.pronoundrilling.controller.WebController.getRound(boolean,boolean,org.springframework.ui.Model)
+2017-04-10 02:17:15,565 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/validateRound],methods=[GET],produces=[text/html;charset=UTF-8]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.validateRound(me.beresnev.pronoundrilling.dto.Round,java.lang.String)
+2017-04-10 02:17:15,566 INFO  RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:543] Mapped "{[/],methods=[GET]}" onto public java.lang.String me.beresnev.pronoundrilling.controller.WebController.index()
+2017-04-10 02:17:15,600 INFO  ApplicationConfig [ApplicationConfig.java:61] Resource handler registered
+2017-04-10 02:17:15,618 INFO  SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:362] Mapped URL path [/resources*] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 02:17:15,911 INFO  RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:17:14 MSK 2017]; parent: Root WebApplicationContext
+2017-04-10 02:17:16,012 INFO  ApplicationConfig [ApplicationConfig.java:43] ViewResolver initialized
+2017-04-10 02:17:16,103 INFO  DispatcherServlet [FrameworkServlet.java:508] FrameworkServlet 'dispatcher-servlet': initialization completed in 1734 ms
+2017-04-10 02:25:10,310 INFO  XmlWebApplicationContext [AbstractApplicationContext.java:987] Closing WebApplicationContext for namespace 'dispatcher-servlet-servlet': startup date [Mon Apr 10 02:17:14 MSK 2017]; parent: Root WebApplicationContext

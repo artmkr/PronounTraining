@@ -9,6 +9,10 @@ public class Round {
     private Pronoun pronoun;
     private VerbPair verbPair;
 
+    public Round() {
+
+    }
+
     public Round(Pronoun pronoun, VerbPair verbPair) {
         this.pronoun = pronoun;
         this.verbPair = verbPair;

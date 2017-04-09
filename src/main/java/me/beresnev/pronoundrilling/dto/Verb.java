@@ -24,7 +24,7 @@ public class Verb {
     @Override
     public String toString() {
         return "Verb{" +
-                "isSingular=" + isPlural +
+                "isPlural=" + isPlural +
                 ", verb='" + verb + '\'' +
                 '}';
     }

@@ -1,5 +1,7 @@
 package me.beresnev.pronoundrilling.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -34,10 +36,12 @@ public class VerbPair {
         return second;
     }
 
+    @JsonIgnore
     public Verb getPlural(){
         return first.isPlural() ? first : second;
     }
 
+    @JsonIgnore
     public Verb getSingular(){
         return !first.isPlural() ? first : second;
     }
