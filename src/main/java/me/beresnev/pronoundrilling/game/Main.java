@@ -11,6 +11,17 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args){
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+
+        /*FileParser fileParser = applicationContext.getBean(FileParser.class);
+        Path verbList = Paths.get("/home/ignat/Documents/Java/IDEA Projects/PronounTraining/src/main/resources/verbs");
+        Path pronounList = Paths.get("/home/ignat/Documents/Java/IDEA Projects/PronounTraining/src/main/resources/pronouns");
+
+        MySqlWordsDao mySqlWordsDao = applicationContext.getBean(MySqlWordsDao.class);
+        System.out.println("Inserting verbs");
+        mySqlWordsDao.insertVerbs(fileParser.parseVerbs(verbList));
+        System.out.println("Inserting pronouns");
+        mySqlWordsDao.insertPronouns(fileParser.parsePronouns(pronounList));*/
+
         GameStarter gameStarter = applicationContext.getBean(GameStarter.class);
         gameStarter.startTheGame();
     }

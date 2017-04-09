@@ -3,6 +3,7 @@ package me.beresnev.pronoundrilling.util;
 import me.beresnev.pronoundrilling.model.Pronoun;
 import me.beresnev.pronoundrilling.model.Verb;
 import me.beresnev.pronoundrilling.model.VerbPair;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,9 +16,11 @@ import java.util.List;
  * @author Ignat Beresnev
  * @since 09.04.17
  */
+@Component
 public class FileParser {
 
-    public static List<Pronoun> parsePronouns(Path path) {
+    // TODO: add trimmer
+    public List<Pronoun> parsePronouns(Path path) {
         LinkedList<Pronoun> pronouns = new LinkedList<>();
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String line;
@@ -33,7 +36,8 @@ public class FileParser {
         return pronouns;
     }
 
-    public static List<VerbPair> parseVerbs(Path path) {
+    // TODO: add trimmer
+    public List<VerbPair> parseVerbs(Path path) {
         LinkedList<VerbPair> verbs = new LinkedList<>();
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String line;

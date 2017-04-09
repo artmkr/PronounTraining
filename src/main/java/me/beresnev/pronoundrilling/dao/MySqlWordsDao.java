@@ -24,6 +24,9 @@ public class MySqlWordsDao implements WordsDao {
     private final JdbcTemplate jdbcTemplate;
     private static final Logger logger = LoggerFactory.getLogger(MySqlWordsDao.class);
 
+    /**
+     * IMPORTANT: enable &rewriteBatchedStatements=true in connection URL
+     */
     @Autowired
     public MySqlWordsDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
