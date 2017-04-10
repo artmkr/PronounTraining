@@ -35,8 +35,20 @@ public class VerbPair {
         return first;
     }
 
+    public void setFirst(Verb first) {
+        this.first = first;
+    }
+
     public Verb getSecond() {
         return second;
+    }
+
+    public void setSecond(Verb second) {
+        this.second = second;
+    }
+
+    public Verb get(boolean plural) {
+        return plural ? getPlural() : getSingular();
     }
 
     @JsonIgnore

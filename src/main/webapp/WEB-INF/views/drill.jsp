@@ -21,8 +21,10 @@
 
         function generateJson() {
             $.ajax({
+                type: 'get',
                 url: 'getRound?coreNouns=0&coreVerbs=0',
                 dataType: 'json',
+                contentType: "application/json;",
                 success: [function (data) {
                     document.getElementById("pronoun").innerHTML = data.pronoun.pronoun;
                     document.getElementById("firstVerb").innerHTML = data.verbPair.first.verb;
@@ -32,33 +34,15 @@
             });
         }
 
-        function validateRound(variant) {
-            $.ajax({
-                url: 'validateRound',
-                data: ({choice: variant}),
-                success: [function (data) {
-                    $('#printCorrect').html(data);
-                    generateJson();
-                }]
-            });
-
-        }
-
         function validateJsonRound(variant) {
-            if (variant === 1) {
-                lastJson.chosen = lastJson.verbPair.first;
-            } else {
-                lastJson.chosen = lastJson.verbPair.second;
-            }
+            lastJson.chosenAnswer = (variant === 1) ? lastJson.verbPair.first : lastJson.verbPair.second;
             $.ajax({
                 type: 'post',
                 url: 'validateJsonRound',
                 dataType: 'json',
-                async: false,
                 contentType: "application/json;",
                 data: JSON.stringify(lastJson),
                 success: [function (data) {
-//                    $('#jsonanswer').html(data);
                     document.getElementById("jsonAnswer").innerHTML = data.message;
                     generateJson();
                 }]

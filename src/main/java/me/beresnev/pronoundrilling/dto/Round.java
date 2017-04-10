@@ -22,8 +22,16 @@ public class Round {
         return pronoun;
     }
 
+    public void setPronoun(Pronoun pronoun) {
+        this.pronoun = pronoun;
+    }
+
     public VerbPair getVerbPair() {
         return verbPair;
+    }
+
+    public void setVerbPair(VerbPair verbPair) {
+        this.verbPair = verbPair;
     }
 
     @Override

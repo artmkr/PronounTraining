@@ -5,8 +5,8 @@ package me.beresnev.pronoundrilling.dto;
  * @since 06.04.17
  */
 public class Verb {
-    private boolean isPlural;
     private String verb;
+    private boolean isPlural;
 
     public Verb() {
     }
@@ -20,15 +20,23 @@ public class Verb {
         return verb;
     }
 
+    public void setVerb(String verb) {
+        this.verb = verb;
+    }
+
     public boolean isPlural() {
         return isPlural;
+    }
+
+    public void setPlural(boolean plural) {
+        isPlural = plural;
     }
 
     @Override
     public String toString() {
         return "Verb{" +
-                "isPlural=" + isPlural +
-                ", verb='" + verb + '\'' +
+                "verb='" + verb + '\'' +
+                ", isPlural=" + isPlural +
                 '}';
     }
 }

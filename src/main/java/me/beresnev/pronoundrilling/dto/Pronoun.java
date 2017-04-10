@@ -22,12 +22,24 @@ public class Pronoun {
         return pronoun;
     }
 
+    public void setPronoun(String pronoun) {
+        this.pronoun = pronoun;
+    }
+
     public boolean isPlural() {
         return isPlural;
     }
 
+    public void setPlural(boolean plural) {
+        isPlural = plural;
+    }
+
     @JsonIgnore
+    @Override
     public String toString() {
-        return pronoun;
+        return "Pronoun{" +
+                "pronoun='" + pronoun + '\'' +
+                ", isPlural=" + isPlural +
+                '}';
     }
 }
