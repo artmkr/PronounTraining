@@ -4,6 +4,8 @@ import me.beresnev.pronoundrilling.dto.Round;
 import me.beresnev.pronoundrilling.dto.Verb;
 import me.beresnev.pronoundrilling.dto.VerbPair;
 import me.beresnev.pronoundrilling.game.GameManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 @SessionAttributes("round")
 public class WebController {
 
+    private static final Logger logger = LoggerFactory.getLogger(WebController.class);
     private final GameManager gameManager;
 
     @Autowired
@@ -49,16 +52,23 @@ public class WebController {
                    Model model) {
         Round round = gameManager.generateRound(coreNouns, coreVerbs);
         model.addAttribute("round", round);
+        logger.info("Adding round: " + round);
         return round;
     }
 
     @GetMapping(value = "/validateRound", produces = "text/html; charset=UTF-8")
     public @ResponseBody
-    String validateRound(@ModelAttribute("round") Round round, @RequestParam("choice") String choice) {
+    String validateRound(@ModelAttribute("round") Round round,
+                         @RequestParam("choice") String choice,
+                         Model model) {
+        logger.info("Recieved round" + round);
+        String showUser = "";
         int i = Integer.parseInt(choice);
         VerbPair pair = round.getVerbPair();
         Verb chosen = (i == 1) ? pair.getFirst() : pair.getSecond();
         boolean b = gameManager.isCorrectAnswer(round.getPronoun(), chosen);
-        return String.format("You chose verb %s, answer is %b", chosen, b);
+        String colour = b ? "green" : "red";
+        String answer = b ? "Correct" : "Wrong";
+        return String.format("<span style=\"color:%s;\">%s</span>", colour, answer);
     }
 }

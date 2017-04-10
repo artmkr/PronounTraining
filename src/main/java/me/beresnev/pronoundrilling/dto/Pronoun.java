@@ -1,5 +1,7 @@
 package me.beresnev.pronoundrilling.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * @author Ignat Beresnev
  * @since 06.04.17
@@ -17,10 +19,12 @@ public class Pronoun {
         return pronoun;
     }
 
+    @JsonIgnore
     public boolean isPlural() {
         return isPlural;
     }
 
+    @JsonIgnore
     public String toString() {
         return pronoun;
     }

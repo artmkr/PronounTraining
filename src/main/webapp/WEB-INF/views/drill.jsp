@@ -11,6 +11,13 @@
     <title>Drilling page</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
+        function generateButton() {
+            generateJson();
+            document.getElementById("first").style.display = "none";
+            document.getElementById("second").style.display = "";
+            document.getElementById("second").style.columnSpan = "2";
+        }
+
         function generateJson() {
             $.ajax({
                 url: 'getRound?coreNouns=0&coreVerbs=0',
@@ -29,8 +36,10 @@
                 data: ({choice: variant}),
                 success: [function (data) {
                     $('#printCorrect').html(data);
+                    generateJson();
                 }]
             });
+
         }
     </script>
     <style>
@@ -92,22 +101,23 @@
 <div class="space"></div>
 <table class="tg">
     <tr>
-        <th colspan="2" width="300" height="60"><p id="pronoun"/></th>
+        <th colspan="2" width="300" height="60"><p id="pronoun"></p></th>
     </tr>
     <tr>
-        <td width="150" height="40"><p id="firstVerb"/></td>
-        <td width="150"><p id="secondVerb"/></td>
+        <td width="150" height="50"><p id="firstVerb"></p></td>
+        <td width="150" height="50"><p id="secondVerb"></p></td>
     </tr>
     <tr>
         <td><input type="submit" value="Choose" class="buttonChoose" onclick="validateRound(1)"></td>
         <td><input type="submit" value="Choose" class="buttonChoose" onclick="validateRound(2)"></td>
     </tr>
     <tr>
-        <td colspan="2"><input type="submit" value="Generate" class="buttonGenerate" onclick="generateJson()"></td>
+        <td id="first" colspan="2"><input type="submit" value="Generate" class="buttonGenerate"
+                                          onclick="generateButton()"></td>
+        <td id="second" style="display: none; font-weight: bold" colspan="2" height="70"><span id="printCorrect"></span>
+        </td>
     </tr>
 </table>
 <br/>
-span here <br/>
-<span style="float: right" id="printCorrect"></span>
 </body>
 </html>
