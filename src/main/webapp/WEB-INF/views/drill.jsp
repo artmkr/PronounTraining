@@ -11,6 +11,7 @@
     <title>Drilling page</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
+        var lastJson;
         function generateButton() {
             generateJson();
             document.getElementById("first").style.display = "none";
@@ -26,6 +27,7 @@
                     document.getElementById("pronoun").innerHTML = data.pronoun.pronoun;
                     document.getElementById("firstVerb").innerHTML = data.verbPair.first.verb;
                     document.getElementById("secondVerb").innerHTML = data.verbPair.second.verb;
+                    lastJson = data;
                 }]
             });
         }
@@ -40,6 +42,27 @@
                 }]
             });
 
+        }
+
+        function validateJsonRound(variant) {
+            if (variant === 1) {
+                lastJson.chosen = lastJson.verbPair.first;
+            } else {
+                lastJson.chosen = lastJson.verbPair.second;
+            }
+            $.ajax({
+                type: 'post',
+                url: 'validateJsonRound',
+                dataType: 'json',
+                async: false,
+                contentType: "application/json;",
+                data: JSON.stringify(lastJson),
+                success: [function (data) {
+//                    $('#jsonanswer').html(data);
+                    document.getElementById("jsonAnswer").innerHTML = data.message;
+                    generateJson();
+                }]
+            })
         }
     </script>
     <style>
@@ -108,8 +131,8 @@
         <td width="150" height="50"><p id="secondVerb"></p></td>
     </tr>
     <tr>
-        <td><input type="submit" value="Choose" class="buttonChoose" onclick="validateRound(1)"></td>
-        <td><input type="submit" value="Choose" class="buttonChoose" onclick="validateRound(2)"></td>
+        <td><input type="submit" value="Choose" class="buttonChoose" onclick="validateJsonRound(1)"></td>
+        <td><input type="submit" value="Choose" class="buttonChoose" onclick="validateJsonRound(2)"></td>
     </tr>
     <tr>
         <td id="first" colspan="2"><input type="submit" value="Generate" class="buttonGenerate"
@@ -118,6 +141,7 @@
         </td>
     </tr>
 </table>
+<p id="jsonAnswer"></p>
 <br/>
 </body>
 </html>

@@ -13,6 +13,9 @@ public class VerbPair {
     private Verb first;
     private Verb second;
 
+    public VerbPair() {
+    }
+
     private VerbPair(Verb first, Verb second) {
         this.first = first;
         this.second = second;

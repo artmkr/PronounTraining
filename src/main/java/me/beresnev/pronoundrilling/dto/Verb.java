@@ -8,6 +8,9 @@ public class Verb {
     private boolean isPlural;
     private String verb;
 
+    public Verb() {
+    }
+
     public Verb(String verb, boolean isPlural) {
         this.verb = verb;
         this.isPlural = isPlural;

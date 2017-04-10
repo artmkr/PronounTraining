@@ -7,8 +7,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * @since 06.04.17
  */
 public class Pronoun {
-    private boolean isPlural;
     private String pronoun;
+    private boolean isPlural;
+
+    public Pronoun() {
+    }
 
     public Pronoun(String pronoun, boolean isPlural) {
         this.pronoun = pronoun;
@@ -19,7 +22,6 @@ public class Pronoun {
         return pronoun;
     }
 
-    @JsonIgnore
     public boolean isPlural() {
         return isPlural;
     }

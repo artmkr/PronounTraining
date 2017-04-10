@@ -1,8 +1,6 @@
 package me.beresnev.pronoundrilling.controller;
 
-import me.beresnev.pronoundrilling.dto.Round;
-import me.beresnev.pronoundrilling.dto.Verb;
-import me.beresnev.pronoundrilling.dto.VerbPair;
+import me.beresnev.pronoundrilling.dto.*;
 import me.beresnev.pronoundrilling.game.GameManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -70,5 +68,17 @@ public class WebController {
         String colour = b ? "green" : "red";
         String answer = b ? "Correct" : "Wrong";
         return String.format("<span style=\"color:%s;\">%s</span>", colour, answer);
+    }
+
+    @PostMapping(value = "/validateJsonRound", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody
+    RoundSent validateJsonRound(@RequestBody RoundRecieved roundRecieved) {
+        boolean b = gameManager.isCorrectJsonAnswer(roundRecieved);
+        logger.info("Received json: " + roundRecieved);
+        String colour = b ? "green" : "red";
+        String answer = b ? "Correct" : "Wrong";
+        logger.info("Colour: {}; answer: {}", colour, answer);
+//        return String.format("<span style=\"color:%s;\">%s</span>", colour, answer);
+        return new RoundSent(answer);
     }
 }

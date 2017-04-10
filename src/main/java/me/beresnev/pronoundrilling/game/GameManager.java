@@ -2,10 +2,7 @@ package me.beresnev.pronoundrilling.game;
 
 
 import me.beresnev.pronoundrilling.dao.WordsDao;
-import me.beresnev.pronoundrilling.dto.Pronoun;
-import me.beresnev.pronoundrilling.dto.Round;
-import me.beresnev.pronoundrilling.dto.Verb;
-import me.beresnev.pronoundrilling.dto.VerbPair;
+import me.beresnev.pronoundrilling.dto.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +41,10 @@ public class GameManager {
 
     public boolean isCorrectAnswer(Pronoun pronoun, Verb verb){
         return pronoun.isPlural() == verb.isPlural();
+    }
+
+    public boolean isCorrectJsonAnswer(RoundRecieved roundRecieved) {
+        return roundRecieved.getChosen().isPlural() == roundRecieved.getPronoun().isPlural();
     }
 
     private <T> T getRandomItemFromList(List<T> coreList, List<T> list, boolean core){
