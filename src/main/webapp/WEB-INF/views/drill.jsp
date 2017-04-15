@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: ignat
@@ -10,99 +11,8 @@
 <head>
     <title>Drilling page</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        var lastJson;
-        function generateButton() {
-            generateJson();
-            document.getElementById("first").style.display = "none";
-            document.getElementById("second").style.display = "";
-            document.getElementById("second").style.columnSpan = "2";
-        }
-
-        function generateJson() {
-            $.ajax({
-                type: 'get',
-                url: 'roundGet?coreNouns=0&coreVerbs=0',
-                dataType: 'json',
-                contentType: "application/json;",
-                success: [function (data) {
-                    document.getElementById("pronoun").innerHTML = data.pronoun.pronoun;
-                    document.getElementById("firstVerb").innerHTML = data.verbPair.first.verb;
-                    document.getElementById("secondVerb").innerHTML = data.verbPair.second.verb;
-                    lastJson = data;
-                }]
-            });
-        }
-
-        function validateJsonRound(variant) {
-            lastJson.chosenAnswer = (variant === 1) ? lastJson.verbPair.first : lastJson.verbPair.second;
-            $.ajax({
-                type: 'post',
-                url: 'roundValidate',
-                dataType: 'json',
-                contentType: "application/json;",
-                data: JSON.stringify(lastJson),
-                success: [function (data) {
-                    document.getElementById("printCorrect").innerHTML = data.isAnswerCorrect;
-                    generateJson();
-                }]
-            })
-        }
-    </script>
-    <style>
-
-        table {
-            margin: 0 auto;
-        }
-
-        .tg {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-            border-spacing: 2px;
-            text-align: center;
-        }
-
-        th {
-            font-size: 30px;
-        }
-
-        td {
-            font-size: 23px;
-            padding: 10px;
-        }
-
-        .buttonGenerate {
-            border: none;
-            padding: 12px 84px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        .buttonChoose {
-            border: none;
-            padding: 6px 54px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        .space {
-            margin-top: 200px;
-        }
-    </style>
+    <script src="<c:url value="/resources/js/round-scripts.js"/>"></script>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/drill.css"/>">
 </head>
 <body>
 <div class="space"></div>

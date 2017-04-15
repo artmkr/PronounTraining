@@ -1,0 +1,51 @@
+table {
+    margin: 0 auto;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-spacing: 2px;
+    text-align: center;
+}
+
+th {
+    font-size: 30px;
+}
+
+td {
+    font-size: 23px;
+    padding: 10px;
+}
+
+.buttonGenerate {
+    border: none;
+    padding: 12px 84px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.buttonChoose {
+    border: none;
+    padding: 6px 54px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.space {
+    margin-top: 200px;
+}
