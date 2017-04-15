@@ -22,7 +22,7 @@
         function generateJson() {
             $.ajax({
                 type: 'get',
-                url: 'getRound?coreNouns=0&coreVerbs=0',
+                url: 'roundGet?coreNouns=0&coreVerbs=0',
                 dataType: 'json',
                 contentType: "application/json;",
                 success: [function (data) {
@@ -38,12 +38,12 @@
             lastJson.chosenAnswer = (variant === 1) ? lastJson.verbPair.first : lastJson.verbPair.second;
             $.ajax({
                 type: 'post',
-                url: 'validateJsonRound',
+                url: 'roundValidate',
                 dataType: 'json',
                 contentType: "application/json;",
                 data: JSON.stringify(lastJson),
                 success: [function (data) {
-                    document.getElementById("jsonAnswer").innerHTML = data.message;
+                    document.getElementById("printCorrect").innerHTML = data.isAnswerCorrect;
                     generateJson();
                 }]
             })

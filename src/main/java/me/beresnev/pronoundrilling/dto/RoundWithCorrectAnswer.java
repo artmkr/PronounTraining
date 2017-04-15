@@ -5,8 +5,6 @@ package me.beresnev.pronoundrilling.dto;
  * @since 10.04.17
  */
 public class RoundWithCorrectAnswer extends RoundWithChosenAnswer {
-
-    private Verb chosenAnswer;
     private boolean isAnswerCorrect;
     private Verb correctAnswer;
 
@@ -14,17 +12,20 @@ public class RoundWithCorrectAnswer extends RoundWithChosenAnswer {
     }
 
     public RoundWithCorrectAnswer(RoundWithChosenAnswer withChosenAnswer) {
-        this.chosenAnswer = withChosenAnswer.getChosenAnswer();
+        super(withChosenAnswer.getPronoun(),
+                withChosenAnswer.getVerbPair(),
+                withChosenAnswer.getChosenAnswer());
+
         boolean isPronounPlural = withChosenAnswer.getPronoun().isPlural();
-        this.isAnswerCorrect = isPronounPlural == chosenAnswer.isPlural();
-        correctAnswer = withChosenAnswer.getVerbPair().get(isPronounPlural);
+        isAnswerCorrect = (isPronounPlural == getChosenAnswer().isPlural());
+        correctAnswer = withChosenAnswer.getVerbPair().get(isPronounPlural); // plural or singular
     }
 
-    public boolean isAnswerCorrect() {
+    public boolean getIsAnswerCorrect() {
         return isAnswerCorrect;
     }
 
-    public void setAnswerCorrect(boolean answerCorrect) {
+    public void setIsAnswerCorrect(boolean answerCorrect) {
         isAnswerCorrect = answerCorrect;
     }
 
@@ -34,5 +35,13 @@ public class RoundWithCorrectAnswer extends RoundWithChosenAnswer {
 
     public void setCorrectAnswer(Verb correctAnswer) {
         this.correctAnswer = correctAnswer;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "; RoundWithCorrectAnswer{" +
+                "isAnswerCorrect=" + isAnswerCorrect +
+                ", correctAnswer=" + correctAnswer +
+                '}';
     }
 }

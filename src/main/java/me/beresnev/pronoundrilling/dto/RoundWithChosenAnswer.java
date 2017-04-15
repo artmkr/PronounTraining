@@ -11,10 +11,6 @@ public class RoundWithChosenAnswer extends Round {
     public RoundWithChosenAnswer() {
     }
 
-    public RoundWithChosenAnswer(Pronoun pronoun, VerbPair verbPair) {
-        super(pronoun, verbPair);
-    }
-
     public RoundWithChosenAnswer(Pronoun pronoun, VerbPair verbPair, Verb chosen) {
         super(pronoun, verbPair);
         this.chosenAnswer = chosen;
