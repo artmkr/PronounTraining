@@ -15,27 +15,38 @@
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/drill.css"/>">
 </head>
 <body>
-<div class="space"></div>
-<table class="tg">
+<div style="margin-top:200px"></div>
+<table>
     <tr>
         <th colspan="2" width="300" height="60"><p id="pronoun"></p></th>
     </tr>
     <tr>
-        <td width="150" height="50"><p id="firstVerb"></p></td>
-        <td width="150" height="50"><p id="secondVerb"></p></td>
+        <td width="150" height="50"><p id="firstOption"></p></td>
+        <td width="150" height="50"><p id="secondOption"></p></td>
     </tr>
     <tr>
-        <td><input type="submit" value="Choose" class="buttonChoose" onclick="validateJsonRound(1)"></td>
-        <td><input type="submit" value="Choose" class="buttonChoose" onclick="validateJsonRound(2)"></td>
+        <td><input type="submit" value="Choose" class="button" onclick="validateRound(1)"></td>
+        <td><input type="submit" value="Choose" class="button" onclick="validateRound(2)"></td>
     </tr>
     <tr>
-        <td id="first" colspan="2"><input type="submit" value="Generate" class="buttonGenerate"
-                                          onclick="generateButton()"></td>
-        <td id="second" style="display: none; font-weight: bold" colspan="2" height="70"><span id="printCorrect"></span>
-        </td>
+        <td id="generateButtonTd" colspan="2" height="75"><input id="generateButton" type="submit" value="Generate"
+                                                                 class="button" onclick="generateButton()"></td>
+        <td id="isAnswerCorrectTd" style="display: none; font-weight: bold" colspan="2" height="75"><span
+                id="isAnswerCorrect" style="font-size: 30px;"></span></td>
     </tr>
 </table>
-<p id="jsonAnswer"></p>
+<div style="margin-top:90px"></div>
+<div align="center"><input type="submit" value="Show settings" class="button" onclick="showSettings()"/></div>
 <br/>
+<table id="settingsTable" style="display:none">
+    <tr>
+        <td>More pronouns</td>
+        <td><input type="checkbox" onclick="checkShowAllPronouns()"/></td>
+    </tr>
+    <tr>
+        <td>More verbs</td>
+        <td><input type="checkbox" onclick="checkShowAllVerbs()"/></td>
+    </tr>
+</table>
 </body>
 </html>

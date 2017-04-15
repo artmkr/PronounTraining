@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
  * @since 15.04.17
  */
 @Controller
+@RequestMapping("/round")
 public class RoundController {
     private static final Logger logger = LoggerFactory.getLogger(WebController.class);
     private final TrainingService trainingService;
@@ -25,18 +26,16 @@ public class RoundController {
         this.trainingService = trainingService;
     }
 
-    // 1 - true, 0 - false
-    // getRound?coreNouns=1&coreVerbs=1
-    @GetMapping(value = "/roundGet", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/get", produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
-    Round getRound(@RequestParam("coreNouns") boolean coreNouns,
-                   @RequestParam("coreVerbs") boolean coreVerbs) {
-        Round round = trainingService.generateRound(coreNouns, coreVerbs);
+    Round getRound(@RequestParam("allNouns") boolean allNouns,
+                   @RequestParam("allVerbs") boolean allVerbs) {
+        Round round = trainingService.generateRound(allNouns, allVerbs);
         logger.info("Generating and sending round: {}", round);
         return round;
     }
 
-    @PostMapping(value = "/roundValidate", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/validate", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
     RoundWithCorrectAnswer validateJsonRound(@RequestBody RoundWithChosenAnswer withChosenAnswer) {
         logger.info("Received JSON RoundWithChosenAnswer: {}", withChosenAnswer);

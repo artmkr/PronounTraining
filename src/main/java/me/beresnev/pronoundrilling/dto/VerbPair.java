@@ -61,7 +61,12 @@ public class VerbPair {
         return !first.isPlural() ? first : second;
     }
 
-    public void switchPlaces(){
+    public void switchPlacesIfLucky() {
+        if (ThreadLocalRandom.current().nextBoolean())
+            switchPlaces();
+    }
+
+    private void switchPlaces() {
         Verb temp = first;
         first = second;
         second = temp;

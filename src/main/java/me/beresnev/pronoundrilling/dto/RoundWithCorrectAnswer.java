@@ -18,7 +18,8 @@ public class RoundWithCorrectAnswer extends RoundWithChosenAnswer {
 
         boolean isPronounPlural = withChosenAnswer.getPronoun().isPlural();
         isAnswerCorrect = (isPronounPlural == getChosenAnswer().isPlural());
-        correctAnswer = withChosenAnswer.getVerbPair().get(isPronounPlural); // plural or singular
+        correctAnswer = withChosenAnswer.getVerbPair().get(isPronounPlural); // plural or singular, same as pronoun
+        getVerbPair().switchPlacesIfLucky();
     }
 
     public boolean getIsAnswerCorrect() {

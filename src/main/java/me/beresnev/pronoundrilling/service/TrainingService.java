@@ -35,10 +35,10 @@ public class TrainingService {
         verbs = wordsDao.getVerbs();
     }
 
-    public Round generateRound(boolean corePronounsOnly, boolean coreVerbsOnly){
+    public Round generateRound(boolean allNouns, boolean allVerbs) {
         return new Round(
-                getRandomItemFromList(corePronounsOnly ? corePronouns : pronouns),
-                getRandomItemFromList(coreVerbsOnly ? coreVerbs : verbs));
+                getRandomItemFromList(allNouns ? pronouns : corePronouns),
+                getRandomItemFromList(allVerbs ? verbs : coreVerbs));
     }
 
     private <T> T getRandomItemFromList(List<T> list) {
