@@ -1,6 +1,7 @@
 var lastJson;
 var allPronouns = false;
 var allVerbs = false;
+var showDetails = true;
 
 
 function generateButton() {
@@ -33,14 +34,16 @@ function validateRound(option) {
         contentType: "application/json;",
         data: JSON.stringify(lastJson),
         success: [function (data) {
-            var isAnswerCorrect = data.isAnswerCorrect.toString();
-            if ("true" === isAnswerCorrect) {
+            var isAnswerCorrect = data.isAnswerCorrect;
+            if (isAnswerCorrect) {
                 document.getElementById("isAnswerCorrect").style.color = "green";
-            } else if ("false" === isAnswerCorrect) {
+                document.getElementById((option === 1) ? "secondOptionButton" : "firstOptionButton").disabled = false;
+                generateRound();
+            } else {
                 document.getElementById("isAnswerCorrect").style.color = "red";
+                document.getElementById((option === 1) ? "firstOptionButton" : "secondOptionButton").disabled = true;
             }
-            document.getElementById("isAnswerCorrect").innerHTML = isAnswerCorrect;
-            generateRound();
+            document.getElementById("isAnswerCorrect").innerHTML = isAnswerCorrect ? "Correct" : "Wrong";
         }]
     })
 }
@@ -55,10 +58,14 @@ function showSettings() {
 
 function checkShowAllPronouns() {
     allPronouns = !allPronouns;
-    generateRound();
+    generateButton();
 }
 
 function checkShowAllVerbs() {
     allVerbs = !allVerbs;
-    generateRound();
+    generateButton();
+}
+
+function checkShowDetails() {
+    showDetails = !showDetails;
 }

@@ -19,7 +19,6 @@ import java.util.List;
 @Component
 public class FileParser {
 
-    // TODO: add trimmer
     public List<Pronoun> parsePronouns(Path path) {
         LinkedList<Pronoun> pronouns = new LinkedList<>();
         try (BufferedReader reader = Files.newBufferedReader(path)) {
@@ -37,7 +36,6 @@ public class FileParser {
         return pronouns;
     }
 
-    // TODO: add trimmer
     public List<VerbPair> parseVerbs(Path path) {
         LinkedList<VerbPair> verbs = new LinkedList<>();
         try (BufferedReader reader = Files.newBufferedReader(path)) {

@@ -25,8 +25,8 @@
         <td width="150" height="50"><p id="secondOption"></p></td>
     </tr>
     <tr>
-        <td><input type="submit" value="Choose" class="button" onclick="validateRound(1)"></td>
-        <td><input type="submit" value="Choose" class="button" onclick="validateRound(2)"></td>
+        <td><input id="firstOptionButton" type="submit" value="Choose" class="button" onclick="validateRound(1)"></td>
+        <td><input id="secondOptionButton" type="submit" value="Choose" class="button" onclick="validateRound(2)"></td>
     </tr>
     <tr>
         <td id="generateButtonTd" colspan="2" height="75"><input id="generateButton" type="submit" value="Generate"
@@ -35,10 +35,12 @@
                 id="isAnswerCorrect" style="font-size: 30px;"></span></td>
     </tr>
 </table>
+<br/>
+<span id="answerDetails"></span>
 <div style="margin-top:90px"></div>
 <div align="center"><input type="submit" value="Show settings" class="button" onclick="showSettings()"/></div>
 <br/>
-<table id="settingsTable" style="display:none">
+<table id="settingsTable" style="display:none; width: 400px">
     <tr>
         <td>More pronouns</td>
         <td><input type="checkbox" onclick="checkShowAllPronouns()"/></td>
@@ -47,6 +49,10 @@
         <td>More verbs</td>
         <td><input type="checkbox" onclick="checkShowAllVerbs()"/></td>
     </tr>
+    <%--<tr>
+        <td>Show prev. round if wrong</td>
+        <td><input type="checkbox" onclick="checkShowDetails()" checked/></td>
+    </tr>--%>
 </table>
 </body>
 </html>
