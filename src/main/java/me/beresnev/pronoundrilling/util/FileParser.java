@@ -25,7 +25,9 @@ public class FileParser {
             String line;
             String[] arr;
             while ((line = reader.readLine()) != null) {
-                line = line.trim();
+                if (line.isEmpty())
+                    continue;
+                line = WordUtil.capitalize(line);
                 arr = line.split(":");
                 Pronoun pronoun = new Pronoun(arr[0], Boolean.parseBoolean(arr[1]));
                 pronouns.add(pronoun);
@@ -41,6 +43,8 @@ public class FileParser {
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String line;
             while ((line = reader.readLine()) != null) {
+                if (line.isEmpty())
+                    continue;
                 line = line.trim();
                 VerbPair pair = VerbPair.randomPair(
                         new Verb(line, true),

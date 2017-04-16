@@ -11,6 +11,10 @@ public class WordUtil {
 
     private static HashSet vowels = new HashSet<>(Arrays.asList(new Character[]{'a', 'o', 'i', 'y', 'u', 'e'}));
 
+    public static String capitalize(String s) {
+        return s.substring(0, 1).toUpperCase() + s.substring(1);
+    }
+
     public static String getWordWithCorrectSuffix(String word){
         int lastChar = word.length() - 1;
         switch(word.charAt(lastChar)){
