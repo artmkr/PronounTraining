@@ -18,6 +18,8 @@ import java.util.List;
  */
 @Component
 public class FileParser {
+    // TODO: With spring-security implement pronoun and verb uploading
+    // TODO: Add proper logging when these classes are widely used
 
     public List<Pronoun> parsePronouns(Path path) {
         LinkedList<Pronoun> pronouns = new LinkedList<>();
@@ -25,8 +27,10 @@ public class FileParser {
             String line;
             String[] arr;
             while ((line = reader.readLine()) != null) {
-                if (line.isEmpty())
+                if (line.isEmpty()) {
                     continue;
+                }
+                line = line.trim();
                 line = WordUtil.capitalize(line);
                 arr = line.split(":");
                 Pronoun pronoun = new Pronoun(arr[0], Boolean.parseBoolean(arr[1]));
@@ -43,9 +47,11 @@ public class FileParser {
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String line;
             while ((line = reader.readLine()) != null) {
-                if (line.isEmpty())
+                if (line.isEmpty()) {
                     continue;
+                }
                 line = line.trim();
+                line = WordUtil.capitalize(line);
                 VerbPair pair = VerbPair.randomPair(
                         new Verb(line, true),
                         new Verb(WordUtil.getWordWithCorrectSuffix(line), false));

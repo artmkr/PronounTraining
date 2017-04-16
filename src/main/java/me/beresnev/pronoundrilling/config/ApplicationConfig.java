@@ -35,7 +35,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
         viewResolver.setContentType("text/html;charset=UTF-8");
         viewResolver.setPrefix("/WEB-INF/views/");
         viewResolver.setSuffix(".jsp");
-        logger.info("ViewResolver initialized");
+        logger.debug("ViewResolver initialized");
         return viewResolver;
     }
 
@@ -47,13 +47,14 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
         dataSource.setUrl(env.getProperty("jdbc.url"));
         dataSource.setUsername(env.getProperty("jdbc.user"));
         dataSource.setPassword(env.getProperty("jdbc.pass"));
+        logger.debug("BasicDataSource configured");
         return dataSource;
     }
 
     @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-        logger.info("Resource handler registered");
+        logger.debug("Resource handler registered");
     }
 
     @Bean
@@ -61,6 +62,10 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
     public JdbcTemplate jdbcTemplate(){
         return new JdbcTemplate(dataSource());
     }
+
+    /*
+    * Leaving it here for the better days of when this application has localization
+    * */
 
     /*@Override
     public void addInterceptors(InterceptorRegistry registry) {

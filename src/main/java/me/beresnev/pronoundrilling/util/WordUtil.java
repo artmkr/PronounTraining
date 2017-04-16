@@ -11,8 +11,10 @@ public class WordUtil {
 
     private static HashSet vowels = new HashSet<>(Arrays.asList(new Character[]{'a', 'o', 'i', 'y', 'u', 'e'}));
 
-    public static String capitalize(String s) {
-        return s.substring(0, 1).toUpperCase() + s.substring(1);
+    public static String capitalize(String string) {
+        StringBuilder builder = new StringBuilder(string);
+        builder.setCharAt(0, Character.toUpperCase(string.charAt(0)));
+        return builder.toString();
     }
 
     public static String getWordWithCorrectSuffix(String word){
@@ -37,11 +39,8 @@ public class WordUtil {
                         return word + "s";
                 }
         }
-
-        // ss, sh, ch
     }
 
-    // a, o, i, y, u, e
     private static boolean isVowel(char ch){
         return vowels.contains(ch);
     }

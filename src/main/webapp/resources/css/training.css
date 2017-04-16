@@ -1,0 +1,55 @@
+.quizTable {
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.quizTable th {
+    font-size: 30px;
+    border: 1px solid #000;
+}
+
+.quizTable td {
+    font-size: 23px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.settingsTableClass {
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 300px;
+    text-align: center;
+}
+
+.settingsTableClass td {
+    border: 1px solid #000;
+    padding: 8px;
+}
+
+table.definitionTable {
+    border: none;
+    table-layout: fixed;
+    width: 300px;
+    height: 50px;
+}
+
+.button {
+    border: none;
+    text-align: center;
+    padding: 6px 54px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px
+}
+#generateButton.button {
+    padding: 12px 84px;
+}
+

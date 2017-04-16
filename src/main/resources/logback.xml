@@ -3,7 +3,6 @@
 
     <jmxConfigurator/>
 
-    <!-- TODO: Hardcoded logging directory -->
     <appender name="file" class="ch.qos.logback.core.FileAppender">
         <file>/home/ignat/Documents/Java/IDEA Projects/PronounTraining/logging/log</file>
 
@@ -20,9 +19,9 @@
         </encoder>
     </appender>
 
-    <logger name="me.beresnev.website" level="debug"/>
+    <logger name="me.beresnev.pronoundrilling" level="debug"/>
 
-    <root level="info">
+    <root level="debug">
         <appender-ref ref="file"/>
         <appender-ref ref="console"/>
     </root>

@@ -10,7 +10,6 @@ public class Round {
     private VerbPair verbPair;
 
     public Round() {
-
     }
 
     public Round(Pronoun pronoun, VerbPair verbPair) {

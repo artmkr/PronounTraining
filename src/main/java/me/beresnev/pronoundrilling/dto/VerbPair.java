@@ -1,7 +1,5 @@
 package me.beresnev.pronoundrilling.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -21,14 +19,25 @@ public class VerbPair {
         this.second = second;
     }
 
-    // TODO: Switch them with 50% chance after the user has seen them
-    public static VerbPair randomPair(Verb first, Verb second){
+    public static VerbPair randomPair(Verb first, Verb second) {
         boolean change = ThreadLocalRandom.current().nextBoolean();
-        if(change){
+        if (change) {
             return new VerbPair(second, first);
         } else {
             return new VerbPair(first, second);
         }
+    }
+
+    public void switchPlacesIfLucky() {
+        if (ThreadLocalRandom.current().nextBoolean()) {
+            switchPlaces();
+        }
+    }
+
+    private void switchPlaces() {
+        Verb temp = first;
+        first = second;
+        second = temp;
     }
 
     public Verb getFirst() {
@@ -51,25 +60,12 @@ public class VerbPair {
         return plural ? getPlural() : getSingular();
     }
 
-    @JsonIgnore
-    public Verb getPlural(){
+    public Verb getPlural() {
         return first.isPlural() ? first : second;
     }
 
-    @JsonIgnore
-    public Verb getSingular(){
+    public Verb getSingular() {
         return !first.isPlural() ? first : second;
-    }
-
-    public void switchPlacesIfLucky() {
-        if (ThreadLocalRandom.current().nextBoolean())
-            switchPlaces();
-    }
-
-    private void switchPlaces() {
-        Verb temp = first;
-        first = second;
-        second = temp;
     }
 
     @Override

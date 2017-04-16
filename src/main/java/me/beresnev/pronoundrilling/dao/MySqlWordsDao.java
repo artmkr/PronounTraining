@@ -14,6 +14,7 @@ import org.springframework.stereotype.Repository;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Ignat Beresnev
@@ -21,7 +22,6 @@ import java.util.List;
  */
 @Repository
 @Primary
-//@Transactional TODO: Check
 public class MySqlWordsDao implements WordsDao {
 
     private static final Logger logger = LoggerFactory.getLogger(MySqlWordsDao.class);
@@ -79,7 +79,8 @@ public class MySqlWordsDao implements WordsDao {
 
     @Override
     public void insertVerbs(List<VerbPair> pairList) {
-        logger.debug("Query to insert verbs");
+        Objects.requireNonNull(pairList);
+        logger.debug("Query to insert verbs {}", pairList);
         jdbcTemplate.batchUpdate("INSERT INTO verbs (verb_plural, verb_singular) VALUES (?, ?)",
                 new BatchPreparedStatementSetter() {
                     @Override
@@ -98,7 +99,8 @@ public class MySqlWordsDao implements WordsDao {
 
     @Override
     public void insertPronouns(List<Pronoun> pronouns) {
-        logger.debug("Query to insert pronouns");
+        Objects.requireNonNull(pronouns);
+        logger.debug("Query to insert pronouns {}", pronouns);
         jdbcTemplate.batchUpdate("INSERT INTO pronouns (pronoun, is_plural) VALUES (?, ?)",
                 new BatchPreparedStatementSetter() {
                     @Override

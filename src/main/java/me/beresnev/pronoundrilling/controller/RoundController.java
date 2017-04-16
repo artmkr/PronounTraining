@@ -11,6 +11,8 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Objects;
+
 /**
  * @author Ignat Beresnev
  * @since 15.04.17
@@ -30,17 +32,19 @@ public class RoundController {
     public @ResponseBody
     Round getRound(@RequestParam("allNouns") boolean allNouns,
                    @RequestParam("allVerbs") boolean allVerbs) {
+        Objects.requireNonNull(allNouns);
+        Objects.requireNonNull(allVerbs);
         Round round = trainingService.generateRound(allNouns, allVerbs);
-        logger.info("Generating and sending round: {}", round);
+        logger.debug("Generating and sending round: {}", round);
         return round;
     }
 
     @PostMapping(value = "/validate", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
     RoundWithCorrectAnswer validateJsonRound(@RequestBody RoundWithChosenAnswer withChosenAnswer) {
-        logger.info("Received JSON RoundWithChosenAnswer: {}", withChosenAnswer);
+        logger.debug("Received JSON RoundWithChosenAnswer: {}", withChosenAnswer);
         RoundWithCorrectAnswer withCorrectAnswer = new RoundWithCorrectAnswer(withChosenAnswer);
-        logger.info("Sending answer: {}", withCorrectAnswer);
+        logger.debug("Sending answer: {}", withCorrectAnswer);
         return withCorrectAnswer;
     }
 
