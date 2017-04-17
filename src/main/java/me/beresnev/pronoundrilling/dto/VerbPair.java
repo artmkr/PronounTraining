@@ -20,7 +20,7 @@ public class VerbPair {
     }
 
     public static VerbPair randomPair(Verb first, Verb second) {
-        boolean change = ThreadLocalRandom.current().nextBoolean();
+        boolean change = ThreadLocalRandom.current().nextInt(100) >= 50; // 50% chance
         if (change) {
             return new VerbPair(second, first);
         } else {
@@ -29,7 +29,7 @@ public class VerbPair {
     }
 
     public void switchPlacesIfLucky() {
-        if (ThreadLocalRandom.current().nextBoolean()) {
+        if (ThreadLocalRandom.current().nextInt(100) >= 30) { // 70% chance
             switchPlaces();
         }
     }

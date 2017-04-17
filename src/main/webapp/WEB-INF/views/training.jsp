@@ -15,7 +15,30 @@
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/training.css"/>">
 </head>
 <body>
-<div style="margin-top:200px"></div>
+<div id="firstMarginTopDiv" style="margin-top:200px; display:none"></div>
+<div id="trainingTutorial" align="center" style="margin-top: 100px;">
+    <table class="" width="500">
+        <tr>
+            <td align="justify">
+                Not sure <b>when to add 'S' to the end of the verb</b>? Have to constantly think about it and remember
+                silly rules?
+                It's just a <b>matter of practice</b>, I say.
+                <ul>
+                    <li><b>Practice makes perfect</b> - the more you see, hear & practice the correct usage of grammar,
+                        the less you'll think about it while speaking
+                    </li>
+                    <li><b>Practice regularly</b> - visit this website for a 5-10 minutes a day
+                        and practice the correct usage of present simple
+                    </li>
+                    <li><b>Think less, do more</b> - Try not to think too much about rules and examples, let it be
+                        automatic.
+                        Just <b>give answers as quick as you can</b>, and sooner or later you'll start getting it right.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
 <table class="quizTable">
     <tr>
         <th colspan="2" width="300" height="60"><p id="pronoun">Pronoun here</p></th>
@@ -39,7 +62,6 @@
     </tr>
 </table>
 <br/>
-<%--<div align="center"><input type="submit" value="Definition" class="button" onclick="showDefinition()"/></div>--%>
 <div id="definitionDiv" align="center" style="display: none">
     <table class="definitionTable">
         <tr>
@@ -49,7 +71,22 @@
         </tr>
     </table>
 </div>
-<div style="margin-top:50px"></div>
+<div id="settingsTutorial" align="center" style="margin-top:50px;">
+    <table class="" width="430">
+        <tr>
+            <td align="justify">
+                Be sure to checkout <b>settings</b> down below. There you can:
+                <ul>
+                    <li>Enable <b>more pronouns</b> - adds more random pronouns</li>
+                    <li>Enable <b>more verbs</b> - adds more random verbs</li>
+                    <li>Show <b>verb definition</b> - shows dictionary definition for current verb (with example). <i>[only
+                        with more verbs enabled]</i></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
+<br/>
 <div align="center"><input type="submit" value="Show / hide settings" class="button" onclick="showSettings()"/></div>
 <br/>
 <table id="settingsTable" style="display:none" class="settingsTableClass">

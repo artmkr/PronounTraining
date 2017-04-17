@@ -15,6 +15,7 @@ public class Round {
     public Round(Pronoun pronoun, VerbPair verbPair) {
         this.pronoun = pronoun;
         this.verbPair = verbPair;
+        this.verbPair.switchPlacesIfLucky();
     }
 
     public Pronoun getPronoun() {
@@ -27,10 +28,6 @@ public class Round {
 
     public VerbPair getVerbPair() {
         return verbPair;
-    }
-
-    public void setVerbPair(VerbPair verbPair) {
-        this.verbPair = verbPair;
     }
 
     @Override

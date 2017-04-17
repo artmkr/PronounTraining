@@ -7,6 +7,9 @@ function generateButton() {
     generateRound();
     document.getElementById("generateButtonTd").style.display = "none";
     document.getElementById("isAnswerCorrectTd").style.display = "";
+    document.getElementById("settingsTutorial").style.display = "none";
+    document.getElementById("trainingTutorial").style.display = "none";
+    document.getElementById("firstMarginTopDiv").style.display = "";
 }
 
 function generateRound() {
