@@ -4,7 +4,7 @@
     <jmxConfigurator/>
 
     <appender name="file" class="ch.qos.logback.core.FileAppender">
-        <file>/home/ignat/Documents/Java/IDEA Projects/PronounTraining/logging/log</file>
+        <file>/home/ubuntu/log</file>
 
         <encoder>
             <charset>UTF-8</charset>
@@ -19,7 +19,7 @@
         </encoder>
     </appender>
 
-    <logger name="me.beresnev.pronoundrilling" level="debug"/>
+    <!--<logger name="me.beresnev.pronoundrilling" level="debug"/>-->
 
     <root level="debug">
         <appender-ref ref="file"/>

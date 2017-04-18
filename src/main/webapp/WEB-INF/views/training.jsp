@@ -48,8 +48,10 @@
         <td width="150" height="50"><p id="secondOption">Second verb</p></td>
     </tr>
     <tr>
-        <td><input id="firstOptionButton" type="submit" value="Choose" class="button" onclick="validateRound(1)"></td>
-        <td><input id="secondOptionButton" type="submit" value="Choose" class="button" onclick="validateRound(2)"></td>
+        <td><input id="firstOptionButton" type="submit" value="Choose [1]" class="button" onclick="validateRound(1)">
+        </td>
+        <td><input id="secondOptionButton" type="submit" value="Choose [2]" class="button" onclick="validateRound(2)">
+        </td>
     </tr>
     <tr>
         <td id="generateButtonTd" colspan="2" height="75">
@@ -89,7 +91,7 @@
 <br/>
 <div align="center"><input type="submit" value="Show / hide settings" class="button" onclick="showSettings()"/></div>
 <br/>
-<table id="settingsTable" style="display:none" class="settingsTableClass">
+<table id="settingsTable" class="settingsTableClass">
     <tr>
         <td style="width: 200px">More pronouns</td>
         <td style="width:20px"><input type="checkbox" onclick="checkShowAllPronouns()"/></td>

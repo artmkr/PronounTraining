@@ -3,6 +3,19 @@ var allPronouns = false;
 var allVerbs = false;
 var showDefinition = false;
 
+$(document).keydown(function (e) {
+    switch (e.which) {
+        case 49: // 1
+            validateRound(1);
+            break;
+        case 50: // 2
+            validateRound(2);
+            break;
+        default:
+            return;
+    }
+});
+
 function generateButton() {
     generateRound();
     document.getElementById("generateButtonTd").style.display = "none";
