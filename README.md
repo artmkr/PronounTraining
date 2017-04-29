@@ -2,7 +2,7 @@
 Simple RESTful web-service that allows you to practice the usage of `Present Simple` (endings of verbs in particular). 
 
 ## Demo
-You can find a live demo here: [http://54.93.74.27:8080/](http://54.93.74.27:8080/)  
+You can find a live demo here: [beresnev.me](http://beresnev.me/)  
 Hosted on a free-tier AWS EC2 (t2.micro, ubuntu): vcpu 1x2.5ghz, 1gb ram, 30gb ssd 
 
 ## RESTful API Commands
