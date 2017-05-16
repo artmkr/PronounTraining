@@ -39,6 +39,7 @@ table.definitionTable {
 }
 
 .button {
+    background-color: #eee;
     border: none;
     text-align: center;
     padding: 6px 54px;
@@ -54,4 +55,3 @@ table.definitionTable {
 #generateButton.button {
     padding: 12px 84px;
 }
-
